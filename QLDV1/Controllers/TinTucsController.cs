@@ -10,14 +10,16 @@ using QLDV1.Models;
 
 namespace QLDV1.Controllers
 {
+    [Authorize]
     public class TinTucsController : Controller
     {
         private QLDVConnect db = new QLDVConnect();
 
         // GET: TinTucs
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
-            return View(db.TinTucs.ToList());
+            var model = db.TinTucs.ToList();
+            return View(model);
         }
 
         // GET: TinTucs/Details/5

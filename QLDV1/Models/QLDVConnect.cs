@@ -7,12 +7,12 @@ namespace QLDV1.Models
 {
     public partial class QLDVConnect : DbContext
     {
-        public DbSet<ChiDoan> ChiDoans { get; set; }
-        public DbSet<DoanVien> DoanViens { get; set; }
-        public DbSet<HoatDong> HoatDongs { get; set; }
-        public DbSet<XepLoai> XepLoais { get; set; }
-        public DbSet<DiemDanh> DiemDanhs { get; set; }
-        public DbSet<KhenThuong> KhenThuongs { get; set; }
+        public virtual DbSet<ChiDoan> ChiDoans { get; set; }
+        public virtual DbSet<DoanVien> DoanViens { get; set; }
+        public virtual DbSet<HoatDong> HoatDongs { get; set; }
+        public virtual DbSet<XepLoai> XepLoais { get; set; }
+        public virtual DbSet<DiemDanh> DiemDanhs { get; set; }
+        public virtual DbSet<KhenThuong> KhenThuongs { get; set; }
         public QLDVConnect()
             : base("name=QLDVConnect")
         {

@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/ckeditor")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -26,6 +27,7 @@
                     <li>@Html.ActionLink("Xếp Loại", "Index", "XepLoais")</li>
                     <li>@Html.ActionLink("Khen Thưởng", "Index", "KhenThuongs")</li>
                     <li>@Html.ActionLink("Điểm Danh", "Index", "DiemDanhs")</li>
+                    <li>@Html.ActionLink("Tin tức", "Index", "TinTucs")</li>
                     <li></li>
                     <li>
                         @if (!User.Identity.IsAuthenticated)
@@ -50,7 +52,7 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/bootstrap")  
     @RenderSection("scripts", required: false)
 </body>
 </html>
