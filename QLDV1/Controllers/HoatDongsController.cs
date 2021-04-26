@@ -15,7 +15,6 @@ namespace QLDV1.Controllers
         private QLDVConnect db = new QLDVConnect();
 
         // GET: HoatDongs
-        [Authorize]
         public ActionResult Index()
         {
             return View(db.HoatDongs.ToList());
@@ -35,7 +34,7 @@ namespace QLDV1.Controllers
             }
             return View(hoatDong);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: HoatDongs/Create
         public ActionResult Create()
         {
@@ -58,7 +57,7 @@ namespace QLDV1.Controllers
 
             return View(hoatDong);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: HoatDongs/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -89,7 +88,7 @@ namespace QLDV1.Controllers
             }
             return View(hoatDong);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: HoatDongs/Delete/5
         public ActionResult Delete(int? id)
         {

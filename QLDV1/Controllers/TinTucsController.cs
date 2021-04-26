@@ -10,7 +10,6 @@ using QLDV1.Models;
 
 namespace QLDV1.Controllers
 {
-    [Authorize]
     public class TinTucsController : Controller
     {
         private QLDVConnect db = new QLDVConnect();

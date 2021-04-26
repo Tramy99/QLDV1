@@ -10,7 +10,6 @@ using QLDV1.Models;
 
 namespace QLDV1.Controllers
 {
-    [Authorize]
     public class XepLoaisController : Controller
     {
         private QLDVConnect db = new QLDVConnect();
@@ -36,7 +35,7 @@ namespace QLDV1.Controllers
             }
             return View(xepLoai);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: XepLoais/Create
         public ActionResult Create()
         {
@@ -63,7 +62,7 @@ namespace QLDV1.Controllers
             ViewBag.mahd = new SelectList(db.HoatDongs, "mahd", "tenhd", xepLoai.mahd);
             return View(xepLoai);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: XepLoais/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -98,7 +97,7 @@ namespace QLDV1.Controllers
             ViewBag.mahd = new SelectList(db.HoatDongs, "mahd", "tenhd", xepLoai.mahd);
             return View(xepLoai);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: XepLoais/Delete/5
         public ActionResult Delete(int? id)
         {

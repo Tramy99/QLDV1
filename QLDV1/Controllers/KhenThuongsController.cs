@@ -10,7 +10,6 @@ using QLDV1.Models;
 
 namespace QLDV1.Controllers
 {
-    [Authorize]
     public class KhenThuongsController : Controller
     {
         private QLDVConnect db = new QLDVConnect();
@@ -36,7 +35,7 @@ namespace QLDV1.Controllers
             }
             return View(khenThuong);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: KhenThuongs/Create
         public ActionResult Create()
         {
@@ -61,7 +60,7 @@ namespace QLDV1.Controllers
             ViewBag.madv = new SelectList(db.DoanViens, "madv", "tendv", khenThuong.madv);
             return View(khenThuong);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: KhenThuongs/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -94,7 +93,7 @@ namespace QLDV1.Controllers
             ViewBag.madv = new SelectList(db.DoanViens, "madv", "tendv", khenThuong.madv);
             return View(khenThuong);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: KhenThuongs/Delete/5
         public ActionResult Delete(int? id)
         {

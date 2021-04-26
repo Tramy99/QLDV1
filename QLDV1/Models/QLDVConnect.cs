@@ -13,6 +13,7 @@ namespace QLDV1.Models
         public virtual DbSet<XepLoai> XepLoais { get; set; }
         public virtual DbSet<DiemDanh> DiemDanhs { get; set; }
         public virtual DbSet<KhenThuong> KhenThuongs { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
         public QLDVConnect()
             : base("name=QLDVConnect")
         {

@@ -190,32 +190,28 @@
     <Compile Include="Migrations\202104080150342_table3.Designer.cs">
       <DependentUpon>202104080150342_table3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104220858049_adedit.cs" />
+    <Compile Include="Migrations\202104220858049_adedit.designer.cs">
+      <DependentUpon>202104220858049_adedit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\AccountRole.cs" />
     <Compile Include="Models\ChiDoan.cs" />
     <Compile Include="Models\DiemDanh.cs" />
     <Compile Include="Models\DoanVien.cs" />
     <Compile Include="Models\HoatDong.cs" />
     <Compile Include="Models\KhenThuong.cs" />
     <Compile Include="Models\QLDVConnect.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\TinTuc.cs" />
     <Compile Include="Models\XepLoai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\CHANGES.html" />
     <Content Include="Scripts\ckeditor\ckeditor.asp" />
@@ -230,16 +226,6 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Scripts\ckeditor\ckeditor.php" />
     <Content Include="Scripts\ckeditor\ckeditor_basic.js" />
     <Content Include="Scripts\ckeditor\ckeditor_basic_source.js" />
@@ -765,6 +751,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104080150342_table3.resx">
       <DependentUpon>202104080150342_table3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104220858049_adedit.resx">
+      <DependentUpon>202104220858049_adedit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

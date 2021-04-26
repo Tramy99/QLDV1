@@ -22,7 +22,7 @@ namespace QLDV1.Controllers
         {
             if(ModelState.IsValid)
             {
-                if(acc.Username=="admin" && acc.Password=="123456789")
+                if(acc.Username== "admin" && acc.Password=="123456789")
                 {
                     FormsAuthentication.SetAuthCookie(acc.Username, true);
                     return RedirectToLocal(returnUrl);
