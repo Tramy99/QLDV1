@@ -23,8 +23,8 @@ namespace QLDV1.Models
         public string xeploai { get; set; }
         public int mahd { get; set; }
         [ForeignKey("madv")]
-        public DoanVien DoanViens { get; set; }
+        public virtual DoanVien DoanViens { get; set; }
         [ForeignKey("mahd")]
-        public HoatDong HoatDongs { get; set; }
+        public virtual HoatDong HoatDongs { get; set; }
     }
 }

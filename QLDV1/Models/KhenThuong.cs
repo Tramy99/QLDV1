@@ -22,6 +22,6 @@ namespace QLDV1.Models
         [Required, DisplayName("Năm học")]
         public int namhoc { get; set; }
         [ForeignKey("madv")]
-        public DoanVien DoanViens { get; set; }
+        public virtual DoanVien DoanViens { get; set; }
     }
 }

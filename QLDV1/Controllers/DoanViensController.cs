@@ -35,7 +35,7 @@ namespace QLDV1.Controllers
             }
             return View(doanVien);
         }
-        [Authorize(Roles = "admin")]
+        // [Authorize(Roles = "admin")]
         // GET: DoanViens/Create
         public ActionResult Create()
         {
@@ -60,7 +60,7 @@ namespace QLDV1.Controllers
             ViewBag.macd = new SelectList(db.ChiDoans, "macd", "tencd", doanVien.macd);
             return View(doanVien);
         }
-        [Authorize(Roles = "admin")]
+        // [Authorize(Roles = "admin")]
         // GET: DoanViens/Edit/5
         public ActionResult Edit(string id)
         {
@@ -93,7 +93,7 @@ namespace QLDV1.Controllers
             ViewBag.macd = new SelectList(db.ChiDoans, "macd", "tencd", doanVien.macd);
             return View(doanVien);
         }
-        [Authorize(Roles = "admin")]
+        // [Authorize(Roles = "admin")]
         // GET: DoanViens/Delete/5
         public ActionResult Delete(string id)
         {

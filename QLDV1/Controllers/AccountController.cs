@@ -10,7 +10,8 @@ namespace QLDV1.Controllers
 {
     public class AccountController : Controller
     {
-        public ViewResult login(string returnUrl)
+        private QLDVConnect db = new QLDVConnect();
+        public ViewResult Login(string returnUrl)
         {
             ViewBag.returnUrl = returnUrl;
             return View();
@@ -22,13 +23,34 @@ namespace QLDV1.Controllers
         {
             if(ModelState.IsValid)
             {
-                if(acc.Username== "admin" && acc.Password=="123456789")
+                var account = db.AccountModels.Where(u => u.Username.Equals(acc.Username) && u.Password.Equals(acc.Password)).Count();
+                if(account == 1)
                 {
                     FormsAuthentication.SetAuthCookie(acc.Username, true);
                     return RedirectToLocal(returnUrl);
-                }    
+                }
+                ModelState.AddModelError("", "Thông tin đăng nhập chưa chính xác");
             }
+            ModelState.AddModelError("", "Tên tài khoản hoặc mật khẩu không được để trống");
             return View(acc);
+        }
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Username, Password")] AccountModel accountModel)
+        {
+            if (ModelState.IsValid)
+            {
+                db.AccountModels.Add(accountModel);
+                db.SaveChanges();
+                return RedirectToAction("login");
+            }
+
+            return View(accountModel);
         }
         public ActionResult Logoff()
         {

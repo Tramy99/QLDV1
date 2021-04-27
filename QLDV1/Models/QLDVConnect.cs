@@ -14,6 +14,8 @@ namespace QLDV1.Models
         public virtual DbSet<DiemDanh> DiemDanhs { get; set; }
         public virtual DbSet<KhenThuong> KhenThuongs { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<AccountModel> AccountModels { get; set; }
+        public virtual DbSet<TinTuc> TinTucs { get; set; }
         public QLDVConnect()
             : base("name=QLDVConnect")
         {
@@ -25,8 +27,6 @@ namespace QLDV1.Models
         {
         }
 
-        public System.Data.Entity.DbSet<QLDV1.Models.AccountModel> AccountModels { get; set; }
-
-        public System.Data.Entity.DbSet<QLDV1.Models.TinTuc> TinTucs { get; set; }
+        
     }
 }

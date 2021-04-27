@@ -34,7 +34,7 @@ namespace QLDV1.Controllers
             }
             return View(chiDoan);
         }
-        [Authorize (Roles="admin")]
+        //[Authorize (Roles="admin")]
         // GET: ChiDoans/Create
         public ActionResult Create()
         {
@@ -57,7 +57,7 @@ namespace QLDV1.Controllers
 
             return View(chiDoan);
         }
-        [Authorize(Roles = "admin")]
+        //// [Authorize(Roles = "admin")]
         // GET: ChiDoans/Edit/5
         public ActionResult Edit(string id)
         {
@@ -88,7 +88,7 @@ namespace QLDV1.Controllers
             }
             return View(chiDoan);
         }
-        [Authorize(Roles = "admin")]
+        //// [Authorize(Roles = "admin")]
         // GET: ChiDoans/Delete/5
         public ActionResult Delete(string id)
         {

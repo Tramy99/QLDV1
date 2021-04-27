@@ -13,9 +13,7 @@
 
         <!-- Links -->
         <ul class="navbar-nav text-center">
-            <li class="nav-item">
-                @Html.ActionLink("Trang chủ", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
-            </li>
+            <a class="navbar-brand" href="/">HOME</a>
             <li class="nav-item">
                 @Html.ActionLink("Chi Đoàn", "Index", "ChiDoans", new { area = "" }, new { @class = "nav-link" })
             </li>
@@ -37,16 +35,32 @@
             <li class="nav-item">
                 @Html.ActionLink("Tin tức", "Index", "TinTucs", new { area = "" }, new { @class = "nav-link" })
             </li>
-            <li>
-                @if (!User.Identity.IsAuthenticated)
-                {
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <li class="nav-item ml-5">
                     @Html.ActionLink("Đăng Nhập", "Login", "Account", new { area = "" }, new { @class = "nav-link" })
-                }
-                else
-                {
-                    @Html.ActionLink("Đăng xuất", "Logoff", "Account", new { area = "" }, new { @class = "nav-link" })
-                }
-            </li>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item dropdown ml-5">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        @HttpContext.Current.User.Identity.Name
+                    </a>
+                    <div class="dropdown-menu">
+                        @Html.ActionLink("Đăng xuất", "Logoff", "Account", new { area = "" }, new { @class = "dropdown-item" })
+                    </div>
+                </li>
+            }
+
+            @if (!User.Identity.IsAuthenticated)
+            {
+
+            }
+            else
+            {
+
+            }
         </ul>
 
     </nav>

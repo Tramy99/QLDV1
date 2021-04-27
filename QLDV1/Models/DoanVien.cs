@@ -31,7 +31,7 @@ namespace QLDV1.Models
         public string dantoc { get; set; }
         public string macd { get; set; }
         [ForeignKey("macd")]
-        public ChiDoan ChiDoans { get; set; }
+        public virtual ChiDoan ChiDoans { get; set; }
         public ICollection<DiemDanh> DiemDanhs { get; set; }
         public ICollection<KhenThuong> KhenThuongs { get; set; }
         public ICollection<XepLoai> XepLoais { get; set; }

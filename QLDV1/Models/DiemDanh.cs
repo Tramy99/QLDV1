@@ -20,8 +20,8 @@ namespace QLDV1.Models
         [DisplayName("Ghi chú")]
         public string ghichu { get; set; }
         [ForeignKey("madv")]
-        public DoanVien DoanViens { get; set; }
+        public virtual DoanVien DoanViens { get; set; }
         [ForeignKey("mahd")]
-        public HoatDong HoatDongs { get; set; }
+        public virtual HoatDong HoatDongs { get; set; }
     }
 }
