@@ -13,7 +13,7 @@ namespace QLDV1.Controllers
     public class DiemDanhsController : Controller
     {
         private QLDVConnect db = new QLDVConnect();
-
+        [Authorize]
         // GET: DiemDanhs
         public ActionResult Index()
         {

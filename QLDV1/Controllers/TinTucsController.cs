@@ -13,7 +13,7 @@ namespace QLDV1.Controllers
     public class TinTucsController : Controller
     {
         private QLDVConnect db = new QLDVConnect();
-
+        [Authorize]
         // GET: TinTucs
         public ActionResult Index(string id)
         {

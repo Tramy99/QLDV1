@@ -6,7 +6,7 @@ using System.Web.Security;
 
 namespace QLDV1.Models
 {
-    public class AccountRole : RoleProvider
+    public class UserRoleProvider : RoleProvider
     {
         public override string ApplicationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
@@ -40,11 +40,11 @@ namespace QLDV1.Models
             using (var db = new QLDVConnect())
             {
                 
-                var abc = ( from acc in db.AccountModels 
-                            join  role in db.Roles on acc.id equals role.Id
+                var userRole = ( from acc in db.AccountModels 
+                            join role in db.Roles on acc.Role_id equals role.Id
                             where acc.Username == username
                             select role.Rolename).ToArray();
-                return abc;
+                return userRole;
             }
         }
 

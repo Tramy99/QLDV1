@@ -169,7 +169,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhenThuongsController.cs" />
     <Compile Include="Controllers\TinTucsController.cs" />
-    <Compile Include="Controllers\XepLoaisController.cs" />
+    <Compile Include="Controllers\XepLoais1Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -193,9 +193,17 @@
     <Compile Include="Migrations\202104220858049_adedit.designer.cs">
       <DependentUpon>202104220858049_adedit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104281634327_chang_user.cs" />
+    <Compile Include="Migrations\202104281634327_chang_user.Designer.cs">
+      <DependentUpon>202104281634327_chang_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104290149348_Alter_Column_XepLoai_PhanLoai.cs" />
+    <Compile Include="Migrations\202104290149348_Alter_Column_XepLoai_PhanLoai.Designer.cs">
+      <DependentUpon>202104290149348_Alter_Column_XepLoai_PhanLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModel.cs" />
-    <Compile Include="Models\AccountRole.cs" />
+    <Compile Include="Models\UserRoleProvider.cs" />
     <Compile Include="Models\ChiDoan.cs" />
     <Compile Include="Models\DiemDanh.cs" />
     <Compile Include="Models\DoanVien.cs" />
@@ -569,6 +577,11 @@
     <Content Include="Scripts\ckeditor\skins\v2\templates.css" />
     <Content Include="Scripts\ckeditor\themes\default\theme.js" />
     <Content Include="Views\Account\Create.cshtml" />
+    <Content Include="Views\XepLoais1\Create.cshtml" />
+    <Content Include="Views\XepLoais1\Delete.cshtml" />
+    <Content Include="Views\XepLoais1\Details.cshtml" />
+    <Content Include="Views\XepLoais1\Edit.cshtml" />
+    <Content Include="Views\XepLoais1\Index.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -701,11 +714,6 @@
     <Content Include="Views\HoatDongs\Details.cshtml" />
     <Content Include="Views\HoatDongs\Edit.cshtml" />
     <Content Include="Views\HoatDongs\Index.cshtml" />
-    <Content Include="Views\XepLoais\Create.cshtml" />
-    <Content Include="Views\XepLoais\Delete.cshtml" />
-    <Content Include="Views\XepLoais\Details.cshtml" />
-    <Content Include="Views\XepLoais\Edit.cshtml" />
-    <Content Include="Views\XepLoais\Index.cshtml" />
     <Content Include="Views\KhenThuongs\Create.cshtml" />
     <Content Include="Views\KhenThuongs\Delete.cshtml" />
     <Content Include="Views\KhenThuongs\Details.cshtml" />
@@ -754,6 +762,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104220858049_adedit.resx">
       <DependentUpon>202104220858049_adedit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104281634327_chang_user.resx">
+      <DependentUpon>202104281634327_chang_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104290149348_Alter_Column_XepLoai_PhanLoai.resx">
+      <DependentUpon>202104290149348_Alter_Column_XepLoai_PhanLoai.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -20,7 +20,7 @@ namespace QLDV1.Models
         [DisplayName("Nhận xét")]
         public string nhanxet { get; set; }
         [Required, DisplayName("Xếp loại")]
-        public string xeploai { get; set; }
+        public string phanloai { get; set; }
         public int mahd { get; set; }
         [ForeignKey("madv")]
         public virtual DoanVien DoanViens { get; set; }

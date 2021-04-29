@@ -10,18 +10,18 @@ using QLDV1.Models;
 
 namespace QLDV1.Controllers
 {
-    public class XepLoaisController : Controller
+    public class XepLoais1Controller : Controller
     {
         private QLDVConnect db = new QLDVConnect();
-
-        // GET: XepLoais
+        [Authorize]
+        // GET: XepLoais1
         public ActionResult Index()
         {
             var xepLoais = db.XepLoais.Include(x => x.DoanViens).Include(x => x.HoatDongs);
             return View(xepLoais.ToList());
         }
-
-        // GET: XepLoais/Details/5
+        
+        // GET: XepLoais1/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,8 +35,8 @@ namespace QLDV1.Controllers
             }
             return View(xepLoai);
         }
-        // [Authorize(Roles = "admin")]
-        // GET: XepLoais/Create
+        [Authorize(Roles = "admin")]
+        // GET: XepLoais1/Create
         public ActionResult Create()
         {
             ViewBag.madv = new SelectList(db.DoanViens, "madv", "tendv");
@@ -44,12 +44,12 @@ namespace QLDV1.Controllers
             return View();
         }
 
-        // POST: XepLoais/Create
+        // POST: XepLoais1/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,madv,namhoc,nhanxet,xeploai,mahd")] XepLoai xepLoai)
+        public ActionResult Create([Bind(Include = "id,madv,namhoc,nhanxet,phanloai,mahd")] XepLoai xepLoai)
         {
             if (ModelState.IsValid)
             {
@@ -62,8 +62,8 @@ namespace QLDV1.Controllers
             ViewBag.mahd = new SelectList(db.HoatDongs, "mahd", "tenhd", xepLoai.mahd);
             return View(xepLoai);
         }
-        // [Authorize(Roles = "admin")]
-        // GET: XepLoais/Edit/5
+        [Authorize(Roles = "admin")]
+        // GET: XepLoais1/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -80,12 +80,12 @@ namespace QLDV1.Controllers
             return View(xepLoai);
         }
 
-        // POST: XepLoais/Edit/5
+        // POST: XepLoais1/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,madv,namhoc,nhanxet,xeploai,mahd")] XepLoai xepLoai)
+        public ActionResult Edit([Bind(Include = "id,madv,namhoc,nhanxet,phanloai,mahd")] XepLoai xepLoai)
         {
             if (ModelState.IsValid)
             {
@@ -97,8 +97,8 @@ namespace QLDV1.Controllers
             ViewBag.mahd = new SelectList(db.HoatDongs, "mahd", "tenhd", xepLoai.mahd);
             return View(xepLoai);
         }
-        // [Authorize(Roles = "admin")]
-        // GET: XepLoais/Delete/5
+        [Authorize(Roles = "admin")]
+        // GET: XepLoais1/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -113,7 +113,7 @@ namespace QLDV1.Controllers
             return View(xepLoai);
         }
 
-        // POST: XepLoais/Delete/5
+        // POST: XepLoais1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

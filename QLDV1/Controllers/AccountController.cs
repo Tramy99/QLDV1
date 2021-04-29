@@ -34,14 +34,17 @@ namespace QLDV1.Controllers
             ModelState.AddModelError("", "Tên tài khoản hoặc mật khẩu không được để trống");
             return View(acc);
         }
+
         public ActionResult Create()
         {
+            ViewBag.Role_id = new SelectList(db.Roles, "Id", "Rolename");
+
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Username, Password")] AccountModel accountModel)
+        public ActionResult Create([Bind(Include = "Username, Password, Role_id")] AccountModel accountModel)
         {
             if (ModelState.IsValid)
             {

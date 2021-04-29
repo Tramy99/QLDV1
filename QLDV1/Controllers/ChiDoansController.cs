@@ -15,6 +15,7 @@ namespace QLDV1.Controllers
         private QLDVConnect db = new QLDVConnect();
 
         // GET: ChiDoans
+        [Authorize(Roles = "admin")]
         public ActionResult Index()
         {
             return View(db.ChiDoans.ToList());
@@ -34,13 +35,11 @@ namespace QLDV1.Controllers
             }
             return View(chiDoan);
         }
-        //[Authorize (Roles="admin")]
         // GET: ChiDoans/Create
         public ActionResult Create()
         {
             return View();
         }
-
         // POST: ChiDoans/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -57,7 +56,6 @@ namespace QLDV1.Controllers
 
             return View(chiDoan);
         }
-        //// [Authorize(Roles = "admin")]
         // GET: ChiDoans/Edit/5
         public ActionResult Edit(string id)
         {
@@ -72,7 +70,6 @@ namespace QLDV1.Controllers
             }
             return View(chiDoan);
         }
-
         // POST: ChiDoans/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -88,7 +85,6 @@ namespace QLDV1.Controllers
             }
             return View(chiDoan);
         }
-        //// [Authorize(Roles = "admin")]
         // GET: ChiDoans/Delete/5
         public ActionResult Delete(string id)
         {
@@ -103,7 +99,6 @@ namespace QLDV1.Controllers
             }
             return View(chiDoan);
         }
-
         // POST: ChiDoans/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -114,7 +109,6 @@ namespace QLDV1.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)

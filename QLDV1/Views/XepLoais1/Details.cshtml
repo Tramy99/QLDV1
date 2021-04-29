@@ -1,13 +1,12 @@
 ﻿@model QLDV1.Models.XepLoai
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Xóa</h2>
+<h2>Thông tin</h2>
 
-<h3>Bạn chắc muốn xóa chứ?</h3>
 <div>
     <h4>Xếp Loại</h4>
     <hr />
@@ -45,21 +44,16 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.xeploai)
+            @Html.DisplayNameFor(model => model.phanloai)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.xeploai)
+            @Html.DisplayFor(model => model.phanloai)
         </dd>
 
     </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Xóa" class="btn btn-default" /> |
-            @Html.ActionLink("Quay lại", "Index")
-        </div>
-    }
 </div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>
