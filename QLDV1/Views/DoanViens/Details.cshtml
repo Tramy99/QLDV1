@@ -10,64 +10,36 @@
 <div>
     <h4>Đoàn Viên</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ChiDoans.tencd)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ChiDoans.tencd)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tendv)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tendv)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ns)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ns)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.gioitinh)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.gioitinh)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.quequan)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.quequan)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ngayvd)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ngayvd)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.dantoc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.dantoc)
-        </dd>
-
-    </dl>
+    <table class="table">
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.ChiDoans.tencd)</td>
+            <td>@Html.DisplayFor(model => model.ChiDoans.tencd)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.tendv)</td>
+            <td>@Html.DisplayFor(model => model.tendv)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.ns)</td>
+            <td>@Html.DisplayFor(model => model.ns)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.gioitinh)</td>
+            <td>@Html.DisplayFor(model => model.gioitinh)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.quequan)</td>
+            <td>@Html.DisplayFor(model => model.quequan)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.ngayvd)</td>
+            <td>@Html.DisplayFor(model => model.ngayvd)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.dantoc)</td>
+            <td>@Html.DisplayFor(model => model.dantoc)</td>
+        </tr>
+    </table>
 </div>
 <p>
     @Html.ActionLink("Sửa", "Edit", new { id = Model.madv }) |

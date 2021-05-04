@@ -10,32 +10,32 @@
 <div>
     <h4>Điểm danh</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.DoanViens.tendv)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DoanViens.tendv)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HoatDongs.tenhd)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HoatDongs.tenhd)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ghichu)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ghichu)
-        </dd>
-
-    </dl>
+    <table class="table">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.DoanViens.tendv)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.DoanViens.tendv)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.HoatDongs.tenhd)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.HoatDongs.tenhd)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.ghichu)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.ghichu)
+            </td>
+        </tr>
+    </table>
 </div>
 <p>
     @Html.ActionLink("Sửa", "Edit", new { id = Model.id }) |

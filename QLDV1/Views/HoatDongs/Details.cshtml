@@ -10,32 +10,20 @@
 <div>
     <h4>Hoạt Động</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.tenhd)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tenhd)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.thoigiantc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.thoigiantc)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ghichu)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ghichu)
-        </dd>
-
-    </dl>
+    <table class="table">
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.tenhd)</td>
+            <td>@Html.DisplayFor(model => model.tenhd)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.thoigiantc)</td>
+            <td>@Html.DisplayFor(model => model.thoigiantc)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.ghichu)</td>
+            <td>@Html.DisplayFor(model => model.ghichu)</td>
+        </tr>
+    </table>
 </div>
 <p>
     @Html.ActionLink("Sửa", "Edit", new { id = Model.mahd }) |

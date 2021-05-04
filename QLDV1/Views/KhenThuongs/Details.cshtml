@@ -10,40 +10,24 @@
 <div>
     <h4>Khen Thưởng</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.DoanViens.tendv)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DoanViens.tendv)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tenkt)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tenkt)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.thanhtich)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.thanhtich)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.namhoc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.namhoc)
-        </dd>
-
-    </dl>
+    <table class="table">
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.DoanViens.tendv)</td>
+            <td>@Html.DisplayFor(model => model.DoanViens.tendv)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.tenkt)</td>
+            <td>@Html.DisplayFor(model => model.tenkt)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.thanhtich)</td>
+            <td>@Html.DisplayFor(model => model.thanhtich)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.namhoc)</td>
+            <td>@Html.DisplayFor(model => model.namhoc)</td>
+        </tr>
+    </table>
 </div>
 <p>
     @Html.ActionLink("Sửa", "Edit", new { id = Model.makt }) |

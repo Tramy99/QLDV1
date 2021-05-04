@@ -10,48 +10,28 @@
 <div>
     <h4>Xếp Loại</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.DoanViens.tendv)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DoanViens.tendv)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HoatDongs.tenhd)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HoatDongs.tenhd)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.namhoc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.namhoc)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.nhanxet)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.nhanxet)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.phanloai)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.phanloai)
-        </dd>
-
-    </dl>
+    <table class="table">
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.DoanViens.tendv)</td>
+            <td>@Html.DisplayFor(model => model.DoanViens.tendv)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.HoatDongs.tenhd)</td>
+            <td>@Html.DisplayFor(model => model.HoatDongs.tenhd)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.namhoc)</td>
+            <td>@Html.DisplayFor(model => model.namhoc)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.nhanxet)</td>
+            <td>@Html.DisplayFor(model => model.nhanxet)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.phanloai)</td>
+            <td>@Html.DisplayFor(model => model.phanloai)</td>
+        </tr>
+    </table>
 </div>
 <p>
     @Html.ActionLink("Sửa", "Edit", new { id = Model.id }) |
