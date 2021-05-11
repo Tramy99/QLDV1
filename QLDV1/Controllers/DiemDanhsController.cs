@@ -37,6 +37,7 @@ namespace QLDV1.Controllers
         }
         // [Authorize(Roles = "admin")]
         // GET: DiemDanhs/Create
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             ViewBag.madv = new SelectList(db.DoanViens, "madv", "tendv");
@@ -62,6 +63,7 @@ namespace QLDV1.Controllers
             ViewBag.mahd = new SelectList(db.HoatDongs, "mahd", "tenhd", diemDanh.mahd);
             return View(diemDanh);
         }
+        [Authorize(Roles = "admin")]
         // [Authorize(Roles = "admin")]
         // GET: DiemDanhs/Edit/5
         public ActionResult Edit(int? id)
@@ -97,6 +99,7 @@ namespace QLDV1.Controllers
             ViewBag.mahd = new SelectList(db.HoatDongs, "mahd", "tenhd", diemDanh.mahd);
             return View(diemDanh);
         }
+        [Authorize(Roles = "admin")]
         // [Authorize(Roles = "admin")]
         // GET: DiemDanhs/Delete/5
         public ActionResult Delete(int? id)

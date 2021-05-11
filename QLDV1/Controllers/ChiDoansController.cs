@@ -9,18 +9,15 @@ using System.Web.Mvc;
 using QLDV1.Models;
 namespace QLDV1.Controllers
 {
-   
     public class ChiDoansController : Controller
     {
         private QLDVConnect db = new QLDVConnect();
-
         // GET: ChiDoans
-        [Authorize(Roles = "admin")]
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.ChiDoans.ToList());
         }
-
         // GET: ChiDoans/Details/5
         public ActionResult Details(string id)
         {
@@ -35,6 +32,7 @@ namespace QLDV1.Controllers
             }
             return View(chiDoan);
         }
+        [Authorize(Roles = "admin")]
         // GET: ChiDoans/Create
         public ActionResult Create()
         {
@@ -56,6 +54,7 @@ namespace QLDV1.Controllers
 
             return View(chiDoan);
         }
+        [Authorize(Roles = "admin")]
         // GET: ChiDoans/Edit/5
         public ActionResult Edit(string id)
         {
@@ -85,6 +84,7 @@ namespace QLDV1.Controllers
             }
             return View(chiDoan);
         }
+        [Authorize(Roles = "admin")]
         // GET: ChiDoans/Delete/5
         public ActionResult Delete(string id)
         {

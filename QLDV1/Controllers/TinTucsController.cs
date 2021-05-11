@@ -35,7 +35,7 @@ namespace QLDV1.Controllers
             }
             return View(tinTuc);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: TinTucs/Create
         public ActionResult Create()
         {
@@ -58,7 +58,7 @@ namespace QLDV1.Controllers
 
             return View(tinTuc);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: TinTucs/Edit/5
         public ActionResult Edit(string id)
         {
@@ -89,7 +89,7 @@ namespace QLDV1.Controllers
             }
             return View(tinTuc);
         }
-
+        [Authorize(Roles = "admin")]
         // GET: TinTucs/Delete/5
         public ActionResult Delete(string id)
         {

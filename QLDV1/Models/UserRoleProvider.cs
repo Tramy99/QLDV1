@@ -40,10 +40,10 @@ namespace QLDV1.Models
             using (var db = new QLDVConnect())
             {
                 
-                var userRole = ( from acc in db.AccountModels 
-                            join role in db.Roles on acc.Role_id equals role.Id
-                            where acc.Username == username
-                            select role.Rolename).ToArray();
+                var userRole = (from acc in db.AccountModels 
+                                join role in db.Roles on acc.Role_id equals role.Id
+                                where acc.Username == username
+                                select role.Rolename).ToArray();
                 return userRole;
             }
         }
